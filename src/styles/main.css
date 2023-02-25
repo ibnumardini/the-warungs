@@ -11,6 +11,11 @@ body {
   font-weight: 400;
 }
 
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -202,7 +207,7 @@ footer p a {
   color: inherit;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
   .content__restaurants {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -224,7 +229,7 @@ footer p a {
   /* show menu */
   header nav .nav__list {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   header nav .nav__list {
@@ -242,5 +247,15 @@ footer p a {
 
   #content {
     padding: 20px 40px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #home h1 {
+    font-size: 2.1rem;
+  }
+
+  .content__restaurants {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
