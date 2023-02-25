@@ -85,7 +85,7 @@ header nav .nav__list {
 
 .content__restaurants {
   display: grid;
-  grid-template-columns: 1, 1fr;
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
 }
 
@@ -161,4 +161,42 @@ footer p {
 
 footer p a {
   color: inherit;
+}
+
+@media screen and (min-width: 700px) {
+  .content__restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 0 40px;
+  }
+
+  /* hide mobile menu button */
+  header nav #hamburger {
+    display: none;
+  }
+
+  /* show menu */
+  header nav .nav__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  header nav .nav__list {
+    list-style: none;
+  }
+
+  header nav .nav__list li a {
+    color: #333;
+    font-size: 1rem;
+  }
+
+  #home {
+    padding: 0 40px;
+  }
+
+  #content {
+    padding: 20px 40px;
+  }
 }
