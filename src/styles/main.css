@@ -39,6 +39,45 @@ header nav .nav__list {
   display: none;
 }
 
+header nav.mobile-nav {
+  position: fixed;
+  width: 50%;
+  background-color: white;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translate(-350px, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+nav.mobile-nav.open {
+  transform: translate(0, 0);
+}
+
+nav.mobile-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.mobile-nav .logo {
+  padding-left: 20px;
+}
+
+nav.mobile-nav ul li {
+  padding: 15px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav.mobile-nav ul:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav.mobile-nav ul li a {
+  color: #333;
+  font-size: 1rem;
+}
+
 #home {
   width: 100%;
   background-image: linear-gradient(
@@ -174,6 +213,11 @@ footer p a {
 
   /* hide mobile menu button */
   header nav #hamburger {
+    display: none;
+  }
+
+  /* hide drawer mobile */
+  header nav.mobile-nav {
     display: none;
   }
 
