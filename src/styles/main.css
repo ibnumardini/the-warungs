@@ -104,13 +104,13 @@ nav.mobile-nav ul li a {
 
 #home h1 {
   text-align: center;
-  color: antiquewhite;
+  color: aliceblue;
   font-weight: 700;
   font-size: 1.9rem;
 }
 
 #home p {
-  color: antiquewhite;
+  color: aliceblue;
   text-align: center;
   font-size: 1.1rem;
 }
@@ -157,7 +157,7 @@ nav.mobile-nav ul li a {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.9rem;
-  color: antiquewhite;
+  color: aliceblue;
 }
 
 .card__detail {
@@ -184,13 +184,22 @@ nav.mobile-nav ul li a {
   font-size: 1.2rem;
 }
 
+.detail__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.detail__title a:hover {
+  text-decoration: underline;
+}
+
 .detail__desc {
   font-weight: 1rem;
 }
 
 footer {
   background-color: #18122b;
-  color: antiquewhite;
+  color: aliceblue;
   width: 100%;
   height: 80px;
   display: flex;
