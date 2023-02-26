@@ -21,23 +21,36 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
 header .logo {
   font-family: "Pacifico", cursive;
   font-size: 1.7rem;
-  padding: 15px 0;
+  padding: 44px;
+}
+
+header nav {
+  padding: 44px;
 }
 
 header nav #hamburger {
   font-size: 1.7rem;
   font-weight: bold;
-  color: #333;
+}
+
+header nav #hamburger:hover {
+  border-bottom: 2px solid aliceblue;
 }
 
 header nav a {
   text-decoration: none;
+  padding: 44px;
+  color: #333;
+}
+
+header nav a:hover {
+  color: #18122b;
+  border-bottom: 2px solid #18122b;
 }
 
 header nav .nav__list {
@@ -53,6 +66,7 @@ header nav.mobile-nav {
   height: 100vh;
   transform: translate(-350px, 0);
   transition: transform 0.3s ease-in-out;
+  padding: 0;
 }
 
 nav.mobile-nav.open {
@@ -65,12 +79,8 @@ nav.mobile-nav ul {
   flex-direction: column;
 }
 
-nav.mobile-nav .logo {
-  padding-left: 20px;
-}
-
 nav.mobile-nav ul li {
-  padding: 15px 20px;
+  padding: 44px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -79,6 +89,8 @@ nav.mobile-nav ul:last-child {
 }
 
 nav.mobile-nav ul li a {
+  padding: 44px;
+  width: 100%;
   color: #333;
   font-size: 1rem;
 }
@@ -238,7 +250,6 @@ footer p a {
   /* show menu */
   header nav .nav__list {
     display: flex;
-    gap: 2rem;
   }
 
   header nav .nav__list {
@@ -246,7 +257,6 @@ footer p a {
   }
 
   header nav .nav__list li a {
-    color: #333;
     font-size: 1rem;
   }
 
