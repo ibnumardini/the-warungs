@@ -291,6 +291,7 @@ footer p a {
   /* show menu */
   header nav .nav__list {
     display: flex;
+    gap: 1px;
   }
 
   header nav .nav__list {
