@@ -17,40 +17,37 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header>
+    <a href="#content" class="skip-link">Go to content</a>
+    <header class="container">
+      <span class="logo">Warung's</span>
+      <nav>
+        <a id="hamburger" href="#">☰</a>
+        <ul class="nav__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Favorite</a></li>
+          <li>
+            <a href="https://github.com/ibnumardini" target="_blank">
+              About Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
         <div class="logo">
           <span>Warung'<span>s</span></span>
         </div>
-        <nav>
-          <a id="hamburger" href="#">☰</a>
-          <ul class="nav__list">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Favorite</a></li>
-            <li>
-              <a href="https://github.com/ibnumardini" target="_blank">
-                About Us
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="mobile-nav">
-          <div class="logo">
-            <span>Warung'<span>s</span></span>
-          </div>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Favorite</a></li>
-            <li>
-              <a href="https://github.com/ibnumardini" target="_blank"
-                >About Us</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-    <section id="home">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Favorite</a></li>
+          <li>
+            <a href="https://github.com/ibnumardini" target="_blank"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="jumbotron">
       <div class="container">
         <h1>Explore the best taste at every step.</h1>
         <p>
@@ -59,143 +56,154 @@
         </p>
       </div>
     </section>
-    <main>
-      <div class="container">
-        <section id="content">
-          <h1 class="content__title">Explores</h1>
-          <div class="content__restaurants">
-              <div class="restaurants__card">
-                <a href="#">
-                  <div class="card__thumbnail">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/04" alt="Malang">
-                    <p class="thumbnail__location">Malang</p>
-                  </div>
-                  <div class="card__detail">
-                    <div class="detail__extras">
-                      <p class="extras__rating">
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                    </div>
-                    <h2 class="detail__title">Fairy Cafe</h2>
-                    <p class="detail__desc">
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth.
-                    </p>
-                  </div>
-                </a>
+    <main id="content" class="container">
+      <h1 class="content__title">Explores</h1>
+      <div class="content__restaurants">
+        <div class="restaurants__card">
+          <a href="#">
+            <div class="card__thumbnail">
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/04"
+                alt="Malang"
+              />
+              <p class="thumbnail__location">Malang</p>
+            </div>
+            <div class="card__detail">
+              <div class="detail__extras">
+                <p class="extras__rating">
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
               </div>
-              <div class="restaurants__card">
-                <a href="#">
-                  <div class="card__thumbnail">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/04" alt="Malang">
-                    <p class="thumbnail__location">Malang</p>
-                  </div>
-                  <div class="card__detail">
-                    <div class="detail__extras">
-                      <p class="extras__rating">
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                    </div>
-                    <h2 class="detail__title">Fairy Cafe</h2>
-                    <p class="detail__desc">
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth.
-                    </p>
-                  </div>
-                </a>
+              <h2 class="detail__title">Fairy Cafe</h2>
+              <p class="detail__desc">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="restaurants__card">
+          <a href="#">
+            <div class="card__thumbnail">
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/04"
+                alt="Malang"
+              />
+              <p class="thumbnail__location">Malang</p>
+            </div>
+            <div class="card__detail">
+              <div class="detail__extras">
+                <p class="extras__rating">
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
               </div>
-              <div class="restaurants__card">
-                <a href="#">
-                  <div class="card__thumbnail">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/04" alt="Malang">
-                    <p class="thumbnail__location">Malang</p>
-                  </div>
-                  <div class="card__detail">
-                    <div class="detail__extras">
-                      <p class="extras__rating">
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                    </div>
-                    <h2 class="detail__title">Fairy Cafe</h2>
-                    <p class="detail__desc">
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth.
-                    </p>
-                  </div>
-                </a>
+              <h2 class="detail__title">Fairy Cafe</h2>
+              <p class="detail__desc">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="restaurants__card">
+          <a href="#">
+            <div class="card__thumbnail">
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/04"
+                alt="Malang"
+              />
+              <p class="thumbnail__location">Malang</p>
+            </div>
+            <div class="card__detail">
+              <div class="detail__extras">
+                <p class="extras__rating">
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
               </div>
-              <div class="restaurants__card">
-                <a href="#">
-                  <div class="card__thumbnail">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/04" alt="Malang">
-                    <p class="thumbnail__location">Malang</p>
-                  </div>
-                  <div class="card__detail">
-                    <div class="detail__extras">
-                      <p class="extras__rating">
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                    </div>
-                    <h2 class="detail__title">Fairy Cafe</h2>
-                    <p class="detail__desc">
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth.
-                    </p>
-                  </div>
-                </a>
+              <h2 class="detail__title">Fairy Cafe</h2>
+              <p class="detail__desc">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="restaurants__card">
+          <a href="#">
+            <div class="card__thumbnail">
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/04"
+                alt="Malang"
+              />
+              <p class="thumbnail__location">Malang</p>
+            </div>
+            <div class="card__detail">
+              <div class="detail__extras">
+                <p class="extras__rating">
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
               </div>
-              <div class="restaurants__card">
-                <a href="https://google.com">
-                  <div class="card__thumbnail">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/04" alt="Malang">
-                    <p class="thumbnail__location">Malang</p>
-                  </div>
-                  <div class="card__detail">
-                    <div class="detail__extras">
-                      <p class="extras__rating">
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star extras__rating_checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                    </div>
-                    <h2 class="detail__title">Fairy Cafe</h2>
-                    <p class="detail__desc">
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth.
-                    </p>
-                  </div>
-                </a>
+              <h2 class="detail__title">Fairy Cafe</h2>
+              <p class="detail__desc">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="restaurants__card">
+          <a href="https://google.com">
+            <div class="card__thumbnail">
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/04"
+                alt="Malang"
+              />
+              <p class="thumbnail__location">Malang</p>
+            </div>
+            <div class="card__detail">
+              <div class="detail__extras">
+                <p class="extras__rating">
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star extras__rating_checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
               </div>
-          </div>
-        </section>
+              <h2 class="detail__title">Fairy Cafe</h2>
+              <p class="detail__desc">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth.
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </main>
     <footer>

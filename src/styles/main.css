@@ -95,7 +95,7 @@ nav.mobile-nav ul li a {
   font-size: 1rem;
 }
 
-#home {
+#jumbotron {
   width: 100%;
   background-image: linear-gradient(
       90deg,
@@ -114,14 +114,14 @@ nav.mobile-nav ul li a {
   gap: 1rem;
 }
 
-#home h1 {
+#jumbotron h1 {
   text-align: center;
   color: aliceblue;
   font-weight: 700;
   font-size: 1.9rem;
 }
 
-#home p {
+#jumbotron p {
   color: aliceblue;
   text-align: center;
   font-size: 1.1rem;
@@ -283,7 +283,7 @@ footer p a {
     font-size: 1rem;
   }
 
-  #home {
+  #jumbotron {
     padding: 0 40px;
   }
 
@@ -293,7 +293,7 @@ footer p a {
 }
 
 @media screen and (min-width: 1140px) {
-  #home h1 {
+  #jumbotron h1 {
     font-size: 2.1rem;
   }
 
