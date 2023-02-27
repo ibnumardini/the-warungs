@@ -159,6 +159,12 @@ nav.mobile-nav ul li a {
 .restaurants__card a {
   text-decoration: none;
   color: inherit;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.restaurants__card a:focus-visible {
+  border: 2px solid black;
 }
 
 .restaurants__card:hover {
