@@ -317,7 +317,7 @@ footer p a {
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
   header .logo {
     font-size: 1.5rem;
   }
