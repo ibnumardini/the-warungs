@@ -142,7 +142,7 @@ nav.mobile-nav ul li a {
 .content__restaurants {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .restaurants__card {
@@ -150,9 +150,19 @@ nav.mobile-nav ul li a {
   min-height: 100px;
   display: flex;
   flex-direction: column;
-  border-radius: 7px;
+  border-radius: 6px;
   overflow: hidden;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: .2s;
+}
+
+.restaurants__card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.restaurants__card:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card__thumbnail {
