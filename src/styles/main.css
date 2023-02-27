@@ -152,6 +152,8 @@ nav.mobile-nav ul li a:hover {
   justify-content: center;
   gap: 1rem;
   padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .content__title {
