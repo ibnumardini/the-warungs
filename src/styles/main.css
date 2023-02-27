@@ -78,7 +78,7 @@ header nav.mobile-nav {
   top: 0;
   left: 0;
   height: 100vh;
-  transform: translate(-350px, 0);
+  transform: translate(-370px, 0);
   transition: transform 0.3s ease-in-out;
   padding: 0;
 }
@@ -265,13 +265,9 @@ footer p a {
   color: inherit;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 744px) {
   .content__restaurants {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  header {
-    padding: 0 40px;
   }
 
   /* hide mobile menu button */
@@ -313,5 +309,11 @@ footer p a {
 
   .content__restaurants {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  header .logo {
+    font-size: 1.5rem;
   }
 }
