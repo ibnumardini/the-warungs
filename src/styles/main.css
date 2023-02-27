@@ -11,6 +11,20 @@ body {
   font-weight: 400;
 }
 
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
