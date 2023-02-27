@@ -81,6 +81,7 @@ header nav.mobile-nav {
   transform: translate(-370px, 0);
   transition: transform 0.3s ease-in-out;
   padding: 0;
+  z-index: 1;
 }
 
 nav.mobile-nav.open {
@@ -107,6 +108,10 @@ nav.mobile-nav ul li a {
   width: 100%;
   color: #333;
   font-size: 1rem;
+}
+
+nav.mobile-nav ul li a:hover {
+  border-bottom: none;
 }
 
 #jumbotron {
