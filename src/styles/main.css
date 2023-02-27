@@ -88,6 +88,10 @@ nav.mobile-nav.open {
   transform: translate(0, 0);
 }
 
+nav.mobile-nav .logo {
+  display: inline-block;
+}
+
 nav.mobile-nav ul {
   list-style: none;
   display: flex;
