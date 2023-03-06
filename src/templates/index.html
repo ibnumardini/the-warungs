@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Recomendations restaurant for you." />
+    <link rel="icon" href="./favicon.ico" />
     <title>The Warung's &#8226; Explore the best taste.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +23,10 @@
     <header class="container">
       <span class="logo">Warung's</span>
       <nav>
-        <a id="hamburger" href="#">☰</a>
+        <a id="hamburger">☰</a>
         <ul class="nav__list">
-          <li><a href="/">Home</a></li>
-          <li><a href="#">Favorite</a></li>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/favorite">Favorite</a></li>
           <li>
             <a href="https://github.com/ibnumardini" target="_blank">
               About Us
@@ -32,11 +34,11 @@
           </li>
         </ul>
       </nav>
-      <nav class="mobile-nav">
+      <nav id="mobile-nav">
         <span class="logo">Warung's</span>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#">Favorite</a></li>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/favorite">Favorite</a></li>
           <li>
             <a href="https://github.com/ibnumardini" target="_blank">
               About Us
@@ -54,10 +56,7 @@
         </p>
       </div>
     </section>
-    <main id="content" class="container">
-      <h1 class="content__title">Explores</h1>
-      <div class="content__restaurants"></div>
-    </main>
+    <main id="main-content"></main>
     <footer>
       <p>Made with ❤️ By Muhammad Fatkurozi - Copyright@2023.</p>
     </footer>
