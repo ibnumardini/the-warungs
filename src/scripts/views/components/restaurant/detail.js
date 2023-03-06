@@ -50,6 +50,9 @@ class DetailRestaurant extends HTMLElement {
     const rating = document.createElement('x-rating');
     rating.rating = { rating: this.#rating };
 
+    const like = document.createElement('x-like');
+    like.state = true;
+
     const $foodMenus = this.#menuFoods.map(({ name }) => `<li>${name}</li>`);
     const foodMenus = $foodMenus.join('');
 
@@ -97,7 +100,7 @@ class DetailRestaurant extends HTMLElement {
                 <div class="reviews">${customerReviews}</div>
             </div>
         </div>
-    </article>`;
+    </article>${like.outerHTML}`;
   }
 
   // eslint-disable-next-line class-methods-use-this

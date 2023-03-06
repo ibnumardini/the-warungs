@@ -10,6 +10,7 @@ specifiers:
   eslint-config-airbnb-base: ^15.0.0
   eslint-plugin-import: ^2.25.2
   html-webpack-plugin: ^5.5.0
+  idb: ^7.1.1
   jasmine-ajax: ^4.0.0
   jasmine-core: ^4.2.0
   karma: ^5.2.3
@@ -27,6 +28,7 @@ specifiers:
   whatwg-fetch: ^3.6.2
 
 dependencies:
+  idb: 7.1.1
   regenerator-runtime: 0.13.11
 
 devDependencies:
@@ -3376,6 +3378,10 @@ packages:
     dependencies:
       postcss: 8.4.21
     dev: true
+
+  /idb/7.1.1:
+    resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
+    dev: false
 
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
