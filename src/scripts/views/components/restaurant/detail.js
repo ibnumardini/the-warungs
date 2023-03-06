@@ -51,7 +51,7 @@ class DetailRestaurant extends HTMLElement {
     rating.rating = { rating: this.#rating };
 
     const like = document.createElement('x-like');
-    like.state = true;
+    like.state = false;
 
     const $foodMenus = this.#menuFoods.map(({ name }) => `<li>${name}</li>`);
     const foodMenus = $foodMenus.join('');

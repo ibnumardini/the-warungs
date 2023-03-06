@@ -1,3 +1,5 @@
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+
 const Favorite = {
   async render() {
     const restaurantsElm = document.createElement('x-list-restaurant');
@@ -6,10 +8,12 @@ const Favorite = {
   },
 
   async afterRender() {
+    const favRestaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+
     const restaurantsElm = document.querySelector('x-list-restaurant');
 
-    restaurantsElm.page = { pageTitle: 'Favorite' };
-    restaurantsElm.restaurants = [];
+    restaurantsElm.page = { pageTitle: 'Favorites' };
+    restaurantsElm.restaurants = favRestaurants;
   },
 };
 
