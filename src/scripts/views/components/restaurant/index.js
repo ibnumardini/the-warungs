@@ -17,12 +17,16 @@ class Restaurant extends HTMLElement {
   render() {
     let restaurantItem = '';
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const restaurant of this.#restaurants) {
-      const restItemElm = document.createElement('x-item-restaurant');
-      restItemElm.restaurant = restaurant;
+    if (!this.#restaurants.length) {
+      restaurantItem = '<p>No data found.</p>';
+    } else {
+      // eslint-disable-next-line no-restricted-syntax
+      for (const restaurant of this.#restaurants) {
+        const restItemElm = document.createElement('x-item-restaurant');
+        restItemElm.restaurant = restaurant;
 
-      restaurantItem += restItemElm.outerHTML;
+        restaurantItem += restItemElm.outerHTML;
+      }
     }
 
     this.innerHTML = `<article id="content" class="container">
