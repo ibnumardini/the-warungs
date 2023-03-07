@@ -1,9 +1,7 @@
 import { CONFIG, IMAGE_RESOLUTION } from '../../../globals/config';
 
 class DetailRestaurant extends HTMLElement {
-  #id;
-
-  #picture;
+  #pictureId;
 
   #name;
 
@@ -32,8 +30,7 @@ class DetailRestaurant extends HTMLElement {
     menus,
     customerReviews,
   }) {
-    this.#id = id;
-    this.#picture = this._buildPictureUrl(pictureId);
+    this.#pictureId = pictureId;
     this.#name = name;
     this.#city = city;
     this.#address = address;
@@ -69,11 +66,13 @@ class DetailRestaurant extends HTMLElement {
     });
     const customerReviews = $customerReviews.join('');
 
+    const altPicture = `${this.#name} - ${this.#city}`;
+
     this.innerHTML = `<article id="content" class="container">
         <div class="detail_restaurants"">
             <div class="main_info">
                 <div class="thumbnail">
-                    <img src="${this.#picture}" alt="">
+                    <img src="${this._buildPictureUrl()}" alt="${altPicture}">
                     <span>${this.#city}</span>
                 </div>
                 <div class="detail">
@@ -103,9 +102,10 @@ class DetailRestaurant extends HTMLElement {
     </article>${like.outerHTML}`;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  _buildPictureUrl(id) {
-    return `${CONFIG.BASE_IMAGE_URL}/${IMAGE_RESOLUTION.MEDIUM}/${id}`;
+  _buildPictureUrl() {
+    return `${CONFIG.BASE_IMAGE_URL}/${IMAGE_RESOLUTION.MEDIUM}/${
+      this.#pictureId
+    }`;
   }
 }
 

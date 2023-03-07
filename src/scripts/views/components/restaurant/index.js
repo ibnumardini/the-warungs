@@ -20,13 +20,14 @@ class Restaurant extends HTMLElement {
     if (!this.#restaurants.length) {
       restaurantItem = '<p>No data found.</p>';
     } else {
-      // eslint-disable-next-line no-restricted-syntax
-      for (const restaurant of this.#restaurants) {
+      const restaurantItemArr = this.#restaurants.map((restaurant) => {
         const restItemElm = document.createElement('x-item-restaurant');
         restItemElm.restaurant = restaurant;
 
-        restaurantItem += restItemElm.outerHTML;
-      }
+        return restItemElm.outerHTML;
+      });
+
+      restaurantItem = restaurantItemArr.join('');
     }
 
     this.innerHTML = `<article id="content" class="container">

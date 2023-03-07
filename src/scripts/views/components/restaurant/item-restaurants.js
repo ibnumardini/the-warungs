@@ -13,13 +13,15 @@ class ItemRestaurant extends HTMLElement {
 
   #desc;
 
-  set restaurant({ id, pictureId, name, city, rating, description }) {
+  set restaurant({
+    id, pictureId, name, city, rating, description,
+  }) {
     this.#id = id;
-    this.#pictureId = this._buildPictureUrl(pictureId);
+    this.#pictureId = pictureId;
     this.#name = name;
     this.#city = city;
     this.#rating = rating;
-    this.#desc = this._buildSimpleDesc(description);
+    this.#desc = description;
 
     this.render();
   }
@@ -28,11 +30,13 @@ class ItemRestaurant extends HTMLElement {
     const rating = document.createElement('x-rating');
     rating.rating = { rating: this.#rating };
 
+    const altPicture = `${this.#name} - ${this.#city}`;
+
     this.innerHTML = `
         <div class="restaurants__card">
         <a href="#/detail/${this.#id}">
         <div class="card__thumbnail">
-            <img src="${this.#pictureId}" alt="${this.#name} - ${this.#city}" />
+            <img src="${this._buildPictureUrl()}" alt="${altPicture}" />
             <p class="thumbnail__location">${this.#city}</p>
         </div>
         <div class="card__detail">
@@ -40,20 +44,20 @@ class ItemRestaurant extends HTMLElement {
             <p class="extras__rating">${rating.outerHTML}</p>
             </div>
             <h2 class="detail__title">${this.#name}</h2>
-            <p class="detail__desc">${this.#desc}</p>
+            <p class="detail__desc">${this._buildSimpleDesc()}</p>
         </div>
         </a>
     </div>`;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  _buildPictureUrl(id) {
-    return `${CONFIG.BASE_IMAGE_URL}/${IMAGE_RESOLUTION.SMALL}/${id}`;
+  _buildPictureUrl() {
+    return `${CONFIG.BASE_IMAGE_URL}/${IMAGE_RESOLUTION.SMALL}/${
+      this.#pictureId
+    }`;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  _buildSimpleDesc(desc) {
-    const shortDesc = desc.slice(0, 180);
+  _buildSimpleDesc() {
+    const shortDesc = this.#desc.slice(0, 180);
 
     return `${shortDesc}..`;
   }

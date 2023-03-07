@@ -4,6 +4,7 @@ const CONFIG = {
   DATABASE_NAME: 'warungs-app',
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurans',
+  CACHE_NAME: 'warungs-app-v1',
 };
 
 const IMAGE_RESOLUTION = {

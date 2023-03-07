@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 class Rating extends HTMLElement {
   #baseRating = 5;
 
@@ -17,12 +16,12 @@ class Rating extends HTMLElement {
 
   render() {
     let rating = '';
-    for (let i = 0; i < this.#rating; i++) {
+    for (let i = 0; i < this.#rating; i += 1) {
       rating += '<span class="fa fa-star extras__rating_checked"></span>';
     }
 
     let voidRating = '';
-    for (let i = 0; i < this.#voidRating; i++) {
+    for (let i = 0; i < this.#voidRating; i += 1) {
       voidRating += '<span class="fa fa-star"></span>';
     }
 
