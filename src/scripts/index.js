@@ -9,6 +9,7 @@ const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#mobile-nav'),
   content: document.querySelector('#main-content'),
+  skipLinkElm: document.querySelector('.skip-link'),
 });
 
 function bootstrap() {

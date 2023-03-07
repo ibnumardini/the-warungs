@@ -2,12 +2,16 @@ import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 import DrawerInitiator from '../utils/drawer-initiator';
 import './components';
+import SkipToContentSmothScrol from '../utils/smoth-skip-to-content';
 
 class App {
-  constructor({ button, drawer, content }) {
+  constructor({
+    button, drawer, content, skipLinkElm,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._skipLinkElm = skipLinkElm;
 
     this._initialAppShell();
   }
@@ -19,11 +23,20 @@ class App {
     });
   }
 
+  _initialSkipLink() {
+    SkipToContentSmothScrol.init({
+      content: this._content,
+      skipLinkElm: this._skipLinkElm,
+    }).smothly();
+  }
+
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    this._initialSkipLink();
   }
 }
 
