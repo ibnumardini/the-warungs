@@ -18,7 +18,7 @@ class Restaurant extends HTMLElement {
     let restaurantItem = '';
 
     if (!this.#restaurants.length) {
-      restaurantItem = '<p>No data found.</p>';
+      restaurantItem = '<p class="restaurant-item__not__found">No data found.</p>';
     } else {
       const restaurantItemArr = this.#restaurants.map((restaurant) => {
         const restItemElm = document.createElement('x-item-restaurant');
