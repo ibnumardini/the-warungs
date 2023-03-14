@@ -47,9 +47,6 @@ class DetailRestaurant extends HTMLElement {
     const rating = document.createElement('x-rating');
     rating.rating = { rating: this.#rating };
 
-    const like = document.createElement('x-like');
-    like.state = false;
-
     const $foodMenus = this.#menuFoods.map(({ name }) => `<li>${name}</li>`);
     const foodMenus = $foodMenus.join('');
 
@@ -99,7 +96,8 @@ class DetailRestaurant extends HTMLElement {
                 <div class="reviews">${customerReviews}</div>
             </div>
         </div>
-    </article>${like.outerHTML}`;
+    </article>
+    <div id="likeButtonContainer"></div>`;
   }
 
   _buildPictureUrl() {

@@ -18,7 +18,7 @@ const Favorite = {
     restaurantsElm.restaurant = restaurant;
 
     LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButton'),
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: { ...restaurant },
     });
   },

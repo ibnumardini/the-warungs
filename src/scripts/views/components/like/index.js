@@ -8,7 +8,7 @@ class Like extends HTMLElement {
   }
 
   render() {
-    const className = this.#like ? 'like' : 'unlike';
+    const className = this.#like ? 'unlike' : 'like';
     const icon = this.#like ? 'fa-heart' : 'fa-heart-o';
 
     this.innerHTML = `

@@ -11,16 +11,16 @@ const LikeButtonInitiator = {
   async _renderButton() {
     const { id } = this._restaurant;
 
-    if (await this._isMovieExist(id)) {
+    if (await this._isRestaurantExist(id)) {
       this._renderLiked();
     } else {
       this._renderLike();
     }
   },
 
-  async _isMovieExist(id) {
-    const movie = await FavoriteRestaurantIdb.getRestaurant(id);
-    return !!movie;
+  async _isRestaurantExist(id) {
+    const restaurant = await FavoriteRestaurantIdb.getRestaurant(id);
+    return !!restaurant;
   },
 
   _renderLike() {
