@@ -1,4 +1,5 @@
 Feature('Liking Restaurants');
+
 const assert = require('assert');
 
 Before(({ I }) => {
@@ -16,8 +17,11 @@ Scenario('liking restaurants', async ({ I }) => {
 
   I.waitForElement('.restaurants__card a', 10);
 
+  const xPathTitleCard =
+    '//*[@id="content"]/div/x-item-restaurant[1]/div/a/div[2]/h2';
+
   const restaurant = locate('.restaurants__card a').first();
-  const restaurantTitle = await I.grabTextFrom(restaurant);
+  const restaurantTitle = await I.grabTextFrom(xPathTitleCard);
   I.click(restaurant);
 
   I.waitForElement('#likeButton', 10);
@@ -26,7 +30,7 @@ Scenario('liking restaurants', async ({ I }) => {
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurants__card');
 
-  const favRestaurantTitle = await I.grabTextFrom('.restaurants__card a');
+  const favRestaurantTitle = await I.grabTextFrom(xPathTitleCard);
 
   assert.strictEqual(restaurantTitle, favRestaurantTitle);
 });
@@ -38,8 +42,11 @@ Scenario('unliking restaurants', async ({ I }) => {
 
   I.waitForElement('.restaurants__card a', 10);
 
+  const xPathTitleCard =
+    '//*[@id="content"]/div/x-item-restaurant[1]/div/a/div[2]/h2';
+
   const restaurant = locate('.restaurants__card a').first();
-  const restaurantTitle = await I.grabTextFrom(restaurant);
+  const restaurantTitle = await I.grabTextFrom(xPathTitleCard);
   I.click(restaurant);
 
   I.waitForElement('#likeButton', 10);
@@ -48,7 +55,7 @@ Scenario('unliking restaurants', async ({ I }) => {
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurants__card');
 
-  const favRestaurantTitle = await I.grabTextFrom('.restaurants__card a');
+  const favRestaurantTitle = await I.grabTextFrom(xPathTitleCard);
 
   assert.strictEqual(restaurantTitle, favRestaurantTitle);
 
