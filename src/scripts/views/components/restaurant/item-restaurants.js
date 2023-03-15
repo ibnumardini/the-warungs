@@ -36,7 +36,7 @@ class ItemRestaurant extends HTMLElement {
         <div class="restaurants__card">
         <a href="#/detail/${this.#id}">
         <div class="card__thumbnail">
-            <img src="${this._buildPictureUrl()}" alt="${altPicture}" />
+            <img class="lazyload" src="${this._buildPictureUrl()}" alt="${altPicture}" />
             <p class="thumbnail__location">${this.#city}</p>
         </div>
         <div class="card__detail">
