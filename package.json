@@ -6,8 +6,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "start-dist": "npx http-server ./dist",
-    "build": "webpack --config webpack.prod.js",
-    "build-image": "node ./src/scripts/tools/image-processing.js",
+    "build": "webpack --config webpack.prod.js && node ./src/scripts/tools/image-processing.js",
     "lint": "npx eslint ./src",
     "test": "karma start",
     "e2e": "codeceptjs run --steps"
