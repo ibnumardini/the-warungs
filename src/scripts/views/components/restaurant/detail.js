@@ -74,6 +74,7 @@ class DetailRestaurant extends HTMLElement {
                 </div>
                 <div class="detail">
                     <h1>${this.#name}</h1>
+                    <p>${this.#rating} &#8226; ${rating.outerHTML}</p>
                     <p>${this.#address}</p>
                     <p>${this.#desc}</p>
                 </div>
