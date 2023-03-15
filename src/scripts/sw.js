@@ -11,7 +11,7 @@ const assetsToCache = [
   './icons/logo384.png',
   './icons/logo512.png',
   './index.html',
-  './favicon.png',
+  './favicon.ico',
   './app.bundle.js',
   './app.webmanifest',
   './sw.bundle.js',
